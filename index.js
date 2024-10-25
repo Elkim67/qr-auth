@@ -21,7 +21,7 @@ app.use(
 );
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(initial_path, "home.html"));
+  res.sendFile(path.join(initial_path, "/index.html"));
 });
 
 // Route pour le formulaire de connexion
