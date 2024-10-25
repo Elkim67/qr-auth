@@ -20,8 +20,8 @@ app.use(
   })
 );
 
-app.get("/", (req, res) => {
-  res.sendFile(path.join(initial_path, "index.html"));
+app.get("/accueil", (req, res) => {
+  res.sendFile(path.join(initial_path, "public", "index.html"));
 });
 
 // Route pour le formulaire de connexion
