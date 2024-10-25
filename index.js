@@ -20,8 +20,8 @@ app.use(
   })
 );
 
-app.get("/*", (req, res) => {
-  res.sendFile(path.join(initial_path, "index.html"));
+app.get("/", (req, res) => {
+  res.sendFile(path.join(initial_path, "/public/index.html"));
 });
 
 // Route pour le formulaire de connexion
@@ -98,7 +98,7 @@ app.post("/login", (req, res) => {
       if (results.length > 0) {
         // Authentification réussie
         req.session.userId = results[0].id;
-        res.redirect("/*"); // Redirection vers la page souhaitée
+        res.redirect("/"); // Redirection vers la page souhaitée
       } else {
         // Authentification échouée
         res.sendFile(path.join(initial_path, "error.html"));
