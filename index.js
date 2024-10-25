@@ -20,7 +20,7 @@ app.use(
   })
 );
 
-app.get("/accueil", (req, res) => {
+app.get("/", (req, res) => {
   res.sendFile(path.join(initial_path, "public", "index.html"));
 });
 
