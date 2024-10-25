@@ -98,7 +98,7 @@ app.post("/login", (req, res) => {
       if (results.length > 0) {
         // Authentification réussie
         req.session.userId = results[0].id;
-        res.redirect("/index"); // Redirection vers la page souhaitée
+        res.redirect("/accueil"); // Redirection vers la page souhaitée
       } else {
         // Authentification échouée
         res.sendFile(path.join(initial_path, "error.html"));
